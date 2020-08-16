@@ -15,9 +15,19 @@
             "Jianzi\\Repository\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Jianzi\\Repository\\Tests\\": "tests"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require": {},
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.5"
+    },
     "extra": {
         "laravel": {
             "providers": [
