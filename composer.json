@@ -31,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jianzi\\Repository\\RespositoryServiceProvider"
+                "Jianzi\\Repository\\RepositoryServiceProvider"
             ]
         },
         "branch-alias": {
