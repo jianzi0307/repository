@@ -9,7 +9,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 class RepositoryMakeCommand extends BaseCommand
 {
-    protected $signature = 'make:repository {name} {--model}';
+    protected $signature = 'make:repository {name} {--model=}';
 
     protected $description = '生成仓库类';
 
