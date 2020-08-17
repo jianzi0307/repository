@@ -12,6 +12,8 @@ class RepositoryMakeCommand extends BaseCommand
 
     protected $description = '生成仓库类';
 
+    protected $type = "Repository";
+
     protected function getStub()
     {
         return __DIR__ . '/stubs/repository.stub';
