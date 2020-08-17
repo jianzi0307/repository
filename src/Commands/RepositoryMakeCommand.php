@@ -9,7 +9,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 class RepositoryMakeCommand extends BaseCommand
 {
-    protected $signature = 'make:repository';
+    protected $signature = 'make:repository {name} {--model}';
 
     protected $description = '生成仓库类';
 
@@ -74,7 +74,13 @@ class RepositoryMakeCommand extends BaseCommand
     protected function getArguments()
     {
         return [
-            ['name', InputArgument::REQUIRED, '仓库名称'],
+            ['name', InputArgument::REQUIRED, '仓库名称']
+        ];
+    }
+
+    protected function getOptions()
+    {
+        return [
             ['model', 'm', InputOption::VALUE_OPTIONAL, '为给定的模型生成仓库'],
         ];
     }
