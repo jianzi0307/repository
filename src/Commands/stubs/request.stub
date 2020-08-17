@@ -3,7 +3,6 @@
 namespace DummyNamespace;
 
 use Jianzi\Repository\Requests\BaseRequest;
-use Illuminate\Http\Request;
 
 class DummyClass extends BaseRequest
 {
