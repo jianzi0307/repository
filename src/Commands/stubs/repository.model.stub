@@ -9,7 +9,6 @@ class DummyClass extends Repository
 {
     protected function model(): string
     {
-        // App\Models\Users
-        return '';
+        return 'DummyFullModelClass';
     }
 }
