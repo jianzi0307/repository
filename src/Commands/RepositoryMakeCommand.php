@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class RepositoryMakeCommand extends BaseCommand
 {
-    protected $signature = 'make:repository {name : 设置仓库名}';
+    protected $signature = 'make:repository {name : 设置仓库名} {--all}';
 
     protected $description = '生成仓库类';
 
