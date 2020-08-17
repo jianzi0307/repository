@@ -3,6 +3,7 @@
 namespace Jianzi\Repository;
 
 use Illuminate\Support\ServiceProvider;
+use Jianzi\Repository\Commands\RepositoryMakeCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -16,12 +17,13 @@ class RepositoryServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap services.
-     *
+     * 注册后启动服务
      * @return void
      */
     public function boot()
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->commands([RepositoryMakeCommand::class]);
+        }
     }
 }

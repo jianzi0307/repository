@@ -1,0 +1,15 @@
+<?php
+
+
+namespace DummyNamespace;
+
+use Jianzi\Repository\Eloquent\Repository;
+
+class DummyClass extends Repository
+{
+    protected function model(): string
+    {
+        // App\Models\Users
+        return '';
+    }
+}
