@@ -8,10 +8,9 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class RepositoryMakeCommand extends BaseCommand
 {
-    protected $signature = 'make:repository {--name=}';
+    protected $signature = 'make:repository {name : 设置仓库名}';
 
-    protected $description = '生成仓库类
-     {--name=}  设置仓库名 [ --name=User ]';
+    protected $description = '生成仓库类';
 
     protected function getStub()
     {
@@ -40,7 +39,7 @@ class RepositoryMakeCommand extends BaseCommand
     protected function getArguments()
     {
         return [
-            ['--name', InputArgument::REQUIRED, '仓库名称'],
+            ['name', InputArgument::REQUIRED, '仓库名称'],
         ];
     }
 }
