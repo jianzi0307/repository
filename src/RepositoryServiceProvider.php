@@ -3,6 +3,7 @@
 namespace Jianzi\Repository;
 
 use Illuminate\Support\ServiceProvider;
+use Jianzi\Repository\Commands\ApiRequestMakeCommand;
 use Jianzi\Repository\Commands\RepositoryMakeCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -23,7 +24,10 @@ class RepositoryServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-            $this->commands([RepositoryMakeCommand::class]);
+            $this->commands([
+                RepositoryMakeCommand::class,
+                ApiRequestMakeCommand::class
+            ]);
         }
     }
 }
